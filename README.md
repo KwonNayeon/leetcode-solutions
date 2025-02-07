@@ -6,6 +6,3 @@ My solutions to LeetCode problems, automatically synced using LeetHub.
 
 ## Languages
 - Python
-
----
-Last Updated: February 2025
