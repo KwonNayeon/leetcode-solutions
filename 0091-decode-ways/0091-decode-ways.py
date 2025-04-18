@@ -17,7 +17,3 @@ class Solution:
                     dp[i] += dp[i-2]
 
         return dp[n]
-
-
-
-        
