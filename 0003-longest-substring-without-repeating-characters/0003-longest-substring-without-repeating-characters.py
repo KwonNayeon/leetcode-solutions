@@ -13,7 +13,7 @@ class Solution:
             seen[char] = i
 
             current_length = i - current_start + 1
-            max_length = max(current_length, max_length)
 
-        return max_length
+            max_length = max(current_length, max_length)
         
+        return max_length
