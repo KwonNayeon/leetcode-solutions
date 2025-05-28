@@ -1,11 +1,12 @@
 class Solution:
     def getSum(self, a: int, b: int) -> int:
-        while b:
-            current_sum = a ^ b
-            next_carry = (a & b) << 1
+        carry = 0
+        mask = 0xffffffff
 
+        while b & mask != 0:
+            carry = (a & b) << 1
             a = a ^ b
-            b = (a & b) << 1
+            b = carry
 
-        return a
+        return a & mask if b > mask else a
         
