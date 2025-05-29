@@ -1,13 +1,14 @@
-# Write your MySQL query statement below
 with data as (
     select 
-        name,
         managerId,
         count(managerId) as cnt
     from Employee
+    where managerId is not null
+    group by managerId
 )
 select name
-from data
-where cnt >= 5
-
+from data d
+join Employee e
+on d.managerId = e.id
+where d.cnt >= 5
 
