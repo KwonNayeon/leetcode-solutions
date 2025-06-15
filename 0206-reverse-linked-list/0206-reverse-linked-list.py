@@ -8,12 +8,9 @@ class Solution:
         prev = None
         curr = head
 
-        while curr is not None:
-
-            temp = curr.next
+        while curr:
+            next_temp = curr.next
             curr.next = prev
-            prev = curr
-            curr = temp
-
+            prev, curr = curr, next_temp
         return prev
         
