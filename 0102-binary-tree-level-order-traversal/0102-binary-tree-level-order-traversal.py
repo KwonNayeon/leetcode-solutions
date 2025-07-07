@@ -10,7 +10,8 @@ class Solution:
             return []
 
         result = []
-        queue = deque([root])
+        queue = deque()
+        queue.append(root)
 
         while queue:
             level_size = len(queue)
@@ -24,7 +25,8 @@ class Solution:
                     queue.append(node.left)
                 if node.right:
                     queue.append(node.right)
-            
+
             result.append(current_level)
 
         return result
+        
